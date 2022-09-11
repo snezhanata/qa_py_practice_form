@@ -20,7 +20,7 @@ def test_submit_student_registration_form():
     browser.element('[value="2000"]').click()  # Calendar: Year
     browser.element('[aria-label="Choose Tuesday, August 8th, 2000"]').click()  # Calendar: Day
     # we can set value in Calendar also just using: browser.element('#dateOfBirthInput').type('01 Sep 2001')
-    browser.element('#subjectsInput').type('Maths').press_enter().click()
+    browser.element('#subjectsInput').type('Maths').press_enter()
     browser.element('[for="hobbies-checkbox-1"]').click()
     browser.element('#uploadPicture').send_keys(abs_path_from_project_root('resources/pic.jpg'))
     browser.element('#currentAddress').type('https://www.youtube.com/watch?v=QH2-TGUlwu4')
