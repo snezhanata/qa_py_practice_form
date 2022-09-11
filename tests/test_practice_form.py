@@ -29,6 +29,7 @@ def test_submit_student_registration_form():
     browser.element('#city').perform(command.js.click)
     browser.element('#react-select-4-input').type('Agra').press_enter()
     browser.element('#submit').press_enter()
+
     browser.all('.table-responsive').should(have.texts(
         'Label Values\nStudent Name Nyan Cat\nStudent Email nyan.cat@mail.com\nGender Female\nMobile 0123401234\nDate of Birth 08 August,2000\nSubjects Maths\nHobbies Sports\nPicture pic.jpg\nAddress https://www.youtube.com/watch?v=QH2-TGUlwu4\nState and City Uttar Pradesh Agra'
     ))
